@@ -27,8 +27,8 @@ Tan solo hay que implementar adecuadamente la función _getJoke_ para que funcio
 
 ### 1-random-photos
 
-[URL ejercicio original](https://www.100jsprojects.com/project/photo-gallery)
-[Demo](https://demo.100jsprojects.com/photo-gallery)
+[URL ejercicio original](https://www.100jsprojects.com/project/photo-gallery)  
+[Demo](https://demo.100jsprojects.com/photo-gallery)  
 
 <details>
   <summary>URL de la petición</summary>
@@ -46,8 +46,8 @@ Tan solo hay que implementar adecuadamente la función _getJoke_ para que funcio
 
 ### 2-image-search-app
 
-[URL ejercicio original](https://www.100jsprojects.com/project/photo-gallery)
-[Demo](https://demo.100jsprojects.com/photo-gallery)
+[URL ejercicio original](https://www.100jsprojects.com/project/photo-gallery)  
+[Demo](https://demo.100jsprojects.com/photo-gallery)  
 
 1. Configura Vue para que gobierne adecuadamente el input de búsqueda mediante la directiva v-model.
 2. Al hacer clic en el botón, se obtienen 10 imágenes de la API que cumplan con el criterio de búsqueda.
