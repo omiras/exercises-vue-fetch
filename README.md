@@ -30,15 +30,15 @@ Tan solo hay que implementar adecuadamente la función _getJoke_ para que funcio
 [URL ejercicio original](https://www.100jsprojects.com/project/photo-gallery)  
 [Demo](https://demo.100jsprojects.com/photo-gallery)  
 
-<details>
-  <summary>URL de la petición</summary>
-  <p>La URL que tenéis que usar es `https://api.unsplash.com/photos?per_page=1&client_id=aMKCCPd9KAQml9r1-a8DuvO6La76rT2Gg54XhDmtiz4`. En el parámetro _per_page_ se indica cuántas fotografías quieres recuperar. Esta API necesita de registro para obtener un *client_id*. Se pide usar la API con moderación ya que está registrada a mi nombre.</p>
-</details>
-
 1. Haz que cada vez que hagamos clic en el botón, se cargue 1 foto aleatoria de https://unsplash.com/ (ignora el input por el momento). Usa la directiva v-for para mostrar dicha imagen.
 2. Luego, usa la directiva v-model adecuadamente para gobernar el input.
 3. Asocia la directiva @click al botón para que haga un _fetch_ a la URL correspondiente teniendo en cuenta el número de imágenes que queremos recuperar.
 3. Investiga el JSON devuelto de la petición para saber cómo obtener la URL de la imagen.
+
+<details>
+  <summary>URL de la petición</summary>
+  <p>La URL que tenéis que usar es `https://api.unsplash.com/photos?per_page=1&client_id=aMKCCPd9KAQml9r1-a8DuvO6La76rT2Gg54XhDmtiz4`. En el parámetro _per_page_ se indica cuántas fotografías quieres recuperar. Esta API necesita de registro para obtener un *client_id*. Se pide usar la API con moderación ya que está registrada a mi nombre.</p>
+</details>
 
 **Ideas para funcionalidades extra**
 
