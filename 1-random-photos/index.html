@@ -13,11 +13,12 @@
   <div id="app" class="container">
     <h1>Photo Gallery</h1>
     <h2>Enter the number of photos</h2>
-    <input type="number" id="input" class="input" value="1" min="1" max="10" />
+    <input v-model="numPhotos" type="number" id="input" class="input" value="1" min="1" max="10" />
     <small class="errorMessage" id="errorMessage">Error Message</small>
-    <button class="btn" id="btn">Get Photos</button>
+    <button @click="handleClick" class="btn" id="btn">Get Photos</button>
     <div class="gallery" id="gallery">
       <!-- Generar tantos <img> como imágenes recuperamos de la API mediante la directiva v-for -->
+       <img v-for="p in photos" :src="p.urls.regular" alt="">
     </div>
   </div>
 
@@ -26,9 +27,23 @@
 
     createApp({
       setup() {
-        const message = ref('Hello Vue!')
+        const photos = ref([])
+        const numPhotos = ref(2)
+
+        const handleClick = async () => {
+          const response = await fetch(`https://api.unsplash.com/photos?per_page=${numPhotos.value}&client_id=aMKCCPd9KAQml9r1-a8DuvO6La76rT2Gg54XhDmtiz4`)
+
+          const data = await response.json()
+          console.log("🚀 ~ handleClick ~ data:", data)
+
+          photos.value = data
+
+        }
+
         return {
-          message
+          photos,
+          numPhotos,
+          handleClick
         }
       }
     }).mount('#app')
