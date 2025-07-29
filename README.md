@@ -15,8 +15,10 @@ Abre con Live Server cada uno de los ficheros index.html del ejercicio a realiza
 
 [Demo parecida](https://omiras.github.io/random-joke-api-project/)
 
-Amplía las funcionalidades de la app que muestra "chistes" de Chuck Norris.
-Permite que un usuario pueda escoger la categoría del chiste.
+Amplía las funcionalidades de la app que muestra "chistes" de Chuck Norris. 
+Permite que un usuario pueda escoger la categoría del chiste. Esto lo conseguimos mediante el parámetro _category_ de la _query string_.
+Por ejemplo, si hacemos una peticion con esta URL https://api.chucknorris.io/jokes/random?category=animal obtendremos un chiste aleatório de la categoría _animal_ 
+Tan solo hay que implementar adecuadamente la función _getJoke_ para que funciona la app.
 
 **Bonus (no hacer los bonus hasta no acabar todos los ejercicios)**
 
