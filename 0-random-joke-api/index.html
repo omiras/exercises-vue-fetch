@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuck Norris por categoría</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.10/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <div id="app">
+      <h1>Chistes de Chuck Norris</h1>
+
+      <label>
+        Categoría:
+        <select v-model="category" @change="getJoke">
+          <option disabled value="">Elige una categoría</option>
+          <option value="animal">Animal</option>
+          <option value="dev">Dev</option>
+          <option value="career">Career</option>
+          <option value="celebrity">Celebrity</option>
+        </select>
+      </label>
+
+      <div v-show="joke">
+        <h2>Category: {{ category }} </h2>
+      <blockquote>{{ joke }}</blockquote>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const { createApp, ref } = Vue
+
+    createApp({
+      setup() {
+        const category = ref('')
+        const joke = ref('')
+
+        async function getJoke() {
+          const res = await fetch(`https://api.chucknorris.io/jokes/random?category=${category.value}`)
+          const data = await res.json()
+          joke.value = data.value
+        }
+
+        return { category, joke, getJoke }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
