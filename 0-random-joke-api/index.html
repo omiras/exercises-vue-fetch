@@ -38,9 +38,7 @@
         const joke = ref('')
 
         async function getJoke() {
-          const res = await fetch(`https://api.chucknorris.io/jokes/random?category=${category.value}`)
-          const data = await res.json()
-          joke.value = data.value
+          // Impleméntame :)
         }
 
         return { category, joke, getJoke }
